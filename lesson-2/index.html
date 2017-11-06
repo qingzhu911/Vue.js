@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue的cdn 这里不要放到body下面去了,放到title下面-->
+	<script src="https://unpkg.com/vue"></script>
+	<!-- 引入css.style -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- dom标签容器 -->
+	<div id="vue-app">
+		<h1>Event事件</h1>
+		<!-- 点击事件 -->
+		<button v-on:click.once="addAge(1)">加一岁</button>
+		<button v-on:click="subtractAge(1)">减一岁</button>
+		<button v-on:click="addAge(10)">加十岁</button>
+		<button v-on:click="subtractAge(10)">减十岁</button>
+		<button v-on:dblclick="addAge(10)">双击加十岁</button>
+		<button v-on:dblclick="subtractAge(10)">双击减十岁</button>
+		<p>我的年龄是:{{age}}</p>
+
+		<!-- 鼠标事件 @和v-on一样效果,语法糖-->
+		<div id="canvas" @mousemove="moveXY">
+			{{x}},{{y}}-
+			<span @mousemove.stop="stopPropagation">阻止冒泡事件</span>
+			<!-- 事件修饰符once -->
+			<a v-on:click.prevent="alert" href="http://www.baidu.com">百度</a>
+		</div>
+
+		<!-- 键盘事件 -->
+		<label>姓名</label>
+		<input type="text" v-on:keyup.enter="logName">
+
+		<label>年龄</label>
+		<input type="text" v-on:keyup.alt.enter="logAge">
+
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
