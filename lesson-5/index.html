@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue的cdn 这里不要放到body下面去了,放到title下面-->
+	<script src="https://unpkg.com/vue"></script>
+	<!-- 引入css.style -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- dom标签容器 -->
+	<div id="vue-app">
+		<h1>动态css样式</h1>
+		<h2>实例1</h2>
+		<!-- <div v-bind:class="{red:true,blue:true}"></div> -->
+		<div v-on:click="changecolor=!changecolor" v-bind:class="{changecolor:changecolor}">
+			<span>zhangsan</span>
+		</div>
+
+		<h2>实例2</h2>
+		<button v-on:click="gaibianyanse=!gaibianyanse" >改变颜色</button>
+		<button v-on:click="gaibianchangdu=!gaibianchangdu" >改变长度</button>
+		<br>	
+		<div v-bind:class="compclass">
+			<span class="spn">zhangsan</span>
+		</div>
+		
+	</div>
+	<!-- 自己写的js -->
+	<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+span{
+	background-color: hotpink;
+	padding: 10px;
+	color: #fff;
+	display: inline-block;
+	margin: 10px 0;
+}
+.changecolor span{
+	background-color: red;
+}
+.spn{
+	background-color: blue;
+
+}
+.gaibianyanse span{
+	background-color: black;
+}
+.gaibianchangdu span{
+	padding: 20px;
+}
