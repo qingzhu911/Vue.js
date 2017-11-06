@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue的cdn 这里不要放到body下面去了,放到title下面-->
+	<script src="https://unpkg.com/vue"></script>
+	<!-- 引入css.style -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- dom标签容器 -->
+	<div id="vue-app">
+		<h1>计算属性computed</h1>
+		<button @click="a++">Add to a</button>
+		<button @click="b++">Add to b</button>
+
+		<p>a-{{a}}</p>
+		<p>b-{{b}}</p>
+
+		<p>age + a = {{addtoa}}</p>
+		<p>age + b = {{addtob}}</p>
+		
+
+	</div>
+	<!-- 自己写的js -->
+	<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
