@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue的cdn 这里不要放到body下面去了,放到title下面-->
+	<script src="https://unpkg.com/vue"></script>
+	<!-- 引入css.style -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- dom标签容器 -->
+	<div id="vue-app">
+		<h1>指令v-if</h1>
+		
+		<button v-on:click="err=!err">toggle error</button>
+		<button v-on:click="succ=!succ">toggle success</button>
+
+		<p v-if="err">网络链接失败:404</p>
+		<p v-if="succ">网络链接成功:200</p>
+
+		<p v-show="err">网络链接失败:404</p>
+		<p v-show="succ">网络链接成功:200</p>
+		
+
+	</div>
+	<!-- 自己写的js -->
+	<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
